@@ -1,105 +1,40 @@
-/* Réinitialisation */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #333;
-    text-align: left;
-}
-img{
-    width: 200px;
-    border-radius: 100px;
-    align-content: center;
-}
-
-/* Header */
-header {
-    align-content: center;
-    background: #333;
-    color: white;
-    padding: 20px;
-    /* display: flex; */
-    text-align: center;
-    /* justify-content: space-between; */
-}
-
-header h1 {
-    margin-bottom: 10px;
-
-}
-
-/* Navigation */
-nav {
-    background: #444;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0f0909;
 }
 
-nav ul li {
-    margin: 10px;
+.gallery {
+    text-align: center;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Sections */
-section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #444;
-    display: inline-block;
-    padding-bottom: 5px;
+.main-image img {
+    width: 500px;
+    height: 650px;
+    object-fit: cover;
+    /* height: auto; */
+    border: 2px solid #640707;
     margin-bottom: 15px;
+    /* border-radius: 130px; */
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-ul li {
-    padding: 5px 0;
+.thumbnail {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-   
-    section {
-        width: 90%;
-    }
+.thumbnail:hover {
+    transform: scale(1.2);
 }
